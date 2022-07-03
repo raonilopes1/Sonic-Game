@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board { 
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(27, 153, 27);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(rgb(1, 1, 243), rgb(206, 233, 248));
+} 
+
+.robotnik {
+    position: absolute; 
+    width: 140px;
+    bottom: 10px; 
+    animation: robotnik-animation 1.5s infinite linear;
+}
+
+.sonic { 
+   width: 80px;
+   position: absolute;
+   bottom: -2px;
+   left: 10px;
+}
+
+.jump {
+   animation: jump 500ms ease-out;
+}
+
+.clouds{
+    position: absolute;
+    width: 350px;
+    animation: clouds-animation 10s infinite linear;
+}
+
+@keyframes robotnik-animation {
+    from {
+      right: -120px;
+    }
+    to {
+      right: 100%;
+    }
+}
+
+@keyframes jump {
+
+     0% {
+        bottom: 0;
+     }
+  
+     40% {  
+        bottom: 180px;
+     }
+     50% {  
+        bottom: 180px;
+     }
+     
+     60% {
+        bottom: 180px;
+    }
+
+     100% {
+        bottom: 0%;
+     }
+
+}
+
+@keyframes clouds-animation{
+    from {
+        right: -350px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
